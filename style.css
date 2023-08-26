@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: zoomBackground 20s infinite alternate;
+}
+
+@keyframes zoomBackground {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 120%;
+    }
+}
+
+.profile-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+    opacity: 0.6;
+    color: #fff;
+    font-family: 'UTM Alter Gothic', sans-serif;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.profile-avatar img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    opacity: 1;
+}
+
+.profile-info {
+    text-align: left;
+    margin-left: 15px;
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.profile-social i {
+    font-size: 30px;
+    color: #1877F2;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Thêm transition cho box-shadow */
+}
+
+.profile-social i:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(24, 119, 242, 0.7); /* Tạo hiệu ứng tỏa sáng màu xanh */
+}
+
+
+
+.profile-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.skill-progress {
+    height: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-text {
+    font-size: 18px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.skill-box {
+    height: 20px;
+    width: 100px; /* Thay đổi giá trị width để tạo hiệu ứng */
+    background-color: yellow;
+    border-radius: 10px;
+    transition: width 2s ease-in-out; /* Thêm hiệu ứng transition cho width */
+}
+
+@keyframes expandWidth {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: var(100px);
+    }
+}
+
+.skill-box.progress-html {
+    width: 180px;
+    background-color: #FF5733;
+    border-radius: 5px;
+    margin-right: 10px;
+    animation: expandWidth 1s ease-in-out;
+}
+
+.skill-box.progress-css {
+    width: 285px;
+    background-color: #3498DB;
+    border-radius: 5px;
+    margin-right: 10px;
+    animation: expandWidth 1s ease-in-out;
+}
+
+.skill-box.progress-js {
+    width: 240px;
+    background-color: #F7DC6F;
+    border-radius: 5px;
+    margin-right: 10px;
+    animation: expandWidth 1s ease-in-out;
+}
+
+
+
+
